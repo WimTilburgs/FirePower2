@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>FirePower</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <!--<link rel="stylesheet" href="./angular-material.css">-->
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body ng-cloak layout="column">
+    <div flex layout="column" >
+
+        <!-- Container #1 (in wireframe) -->
+        <md-toolbar layout="row" class="md-whiteframe-z2">
+
+            <h1>FirePower</h1>
+        </md-toolbar>
+
+        <!-- Container #2 (in wireframe) -->
+        <div flex layout="row">
+
+            <!-- Container #3 (in wireframe) -->
+            <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
+
+            </md-sidenav>
+
+            <!-- Container #4 (in wireframe) -->
+            <div ng-include="'src/stamgegevens/stamgegevens.html'">
+              
+            </div>
+            
+        </div>
+        <!--<div>
+        <h1>Firepower</h1>
+       
+        </div>
+    </div>-->
+
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+
+        <script>
+            System.import('app/app');
+        </script>
+</body>
+
+</html>
